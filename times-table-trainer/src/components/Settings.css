@@ -1,0 +1,128 @@
+.settings {
+  width: 100%;
+  max-width: 420px;
+  animation: fadeUp 0.4s ease both;
+}
+
+.settings__header {
+  margin-bottom: 2.5rem;
+}
+
+.settings__icon {
+  font-family: 'DM Mono', monospace;
+  font-size: 3rem;
+  color: #c8f04a;
+  line-height: 1;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.settings__header h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.4rem;
+}
+
+.settings__header p {
+  font-size: 0.9rem;
+  color: #777;
+  font-weight: 300;
+}
+
+.settings__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.settings__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.field input {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  color: #f0f0f0;
+  font-family: 'DM Mono', monospace;
+  font-size: 1.4rem;
+  padding: 0.7rem 0.9rem;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  width: 100%;
+}
+
+.session__feedback-hint strong {
+  font-family: 'DM Mono', monospace;
+  color: #c8f04a;
+}
+
+.field input:focus {
+  border-color: #c8f04a;
+  box-shadow: 0 0 0 3px rgba(200, 240, 74, 0.08);
+}
+
+/* hide number spinners */
+.field input::-webkit-outer-spin-button,
+.field input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.field input[type=number] { -moz-appearance: textfield; }
+
+.settings__error {
+  font-size: 0.82rem;
+  color: #ff6b6b;
+  background: rgba(255,107,107,0.08);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+}
+
+.btn-start {
+  margin-top: 0.5rem;
+  background: #c8f04a;
+  color: #0f0f0f;
+  border: none;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.85rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.btn-start span {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.9rem;
+  background: rgba(0,0,0,0.12);
+  border-radius: 4px;
+  padding: 0.1rem 0.35rem;
+}
+
+.btn-start:hover  { background: #d4f55e; }
+.btn-start:active { transform: scale(0.98); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
